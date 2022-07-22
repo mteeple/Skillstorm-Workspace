@@ -1,17 +1,23 @@
 
-†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ĞôHÑÚRMINORZ
+c
+java:S1128"/Remove this unused import 'java.sql.Statement'.(ÏÖÔø8˜ö®³¢0HòÜRMINORZ
 CODE_SMELL
-~
-java:S2095'"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HĞÚRBLOCKERZBUG
 d
-java:S1481"+Remove this unused "status" local variable.(ÔåĞÀúÿÿÿÿ8ÃÄ–¨¢0HÔÚRMINORZ
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜ö®³¢0HôÜRMINORZ
 CODE_SMELL
 ~
-java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HÏÚRBLOCKERZBUG
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HöÜRBLOCKERZBUG
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ĞôH÷ÜRMINORZ
+CODE_SMELL
 ~
-java:S2095C"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HÍÚRBLOCKERZBUG
-~
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HÎÚRBLOCKERZBUG
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HøÜRBLOCKERZBUG
 s
-java:S1854":Remove this useless assignment to local variable "status".(ÔåĞÀúÿÿÿÿ8ÃÄ–¨¢0HÌÚRMAJORZ
+java:S1854":Remove this useless assignment to local variable "status".(ÔåĞÀúÿÿÿÿ8ÃÄ–¨¢0HùÜRMAJORZ
 CODE_SMELL
+d
+java:S1481"+Remove this unused "status" local variable.(ÔåĞÀúÿÿÿÿ8ÃÄ–¨¢0HúÜRMINORZ
+CODE_SMELL
+~
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HüÜRBLOCKERZBUG
+~
+java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÃÄ–¨¢0HıÜRBLOCKERZBUG

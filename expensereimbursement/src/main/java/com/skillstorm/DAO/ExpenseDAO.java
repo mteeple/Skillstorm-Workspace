@@ -4,13 +4,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.skillstorm.beans.Expense;
-
 import com.skillstorm.beans.ReimbursementStatus;
 
 public class ExpenseDAO {
@@ -22,7 +19,6 @@ public class ExpenseDAO {
 	
 	// adds new entries
 	public void create(Expense expense) throws SQLException{
-		ReimbursementStatus status = new ReimbursementStatus();
 		String sql = "insert into expenses(employee_name, reason, notes, reimbursement_id) values (?, ?, ?, 1)";
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setString(1, expense.getEmployeeName());

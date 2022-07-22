@@ -1,7 +1,6 @@
 package com.skillstorm.expensereimbursement;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;

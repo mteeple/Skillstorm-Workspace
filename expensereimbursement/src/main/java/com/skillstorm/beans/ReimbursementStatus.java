@@ -1,7 +1,5 @@
 package com.skillstorm.beans;
 
-import java.util.Objects;
-
 public class ReimbursementStatus {
 
 	private String reimburStatus; 
