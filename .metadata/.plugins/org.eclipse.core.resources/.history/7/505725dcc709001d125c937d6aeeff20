@@ -1,0 +1,53 @@
+package com.skillstorm.beans;
+
+import java.util.Objects;
+
+public class ReimbursementStatus {
+
+	private String reimburseStatus; 
+	private int statusId; 
+	
+	public ReimbursementStatus() {
+		super();
+	}
+	
+	public ReimbursementStatus(int statusId) {
+		super();
+		if (statusId == 2) {
+			this.reimburseStatus = "Approved";
+		} else if (statusId == 3) {
+			this.reimburseStatus = "Denied";
+		} else {
+			this.reimburseStatus = "Pending";
+		}
+		this.statusId = statusId;
+	}
+	public String getReimburStatus() {
+		return reimburseStatus;
+	}
+
+	public int getStatusId() {
+		return statusId;
+	}
+
+	public void setStatusId(int statusId) {
+		this.statusId = statusId;
+		if (statusId == 2) {
+			this.reimburseStatus = "Approved";
+		} else if (statusId == 3) {
+			this.reimburseStatus = "Denied";
+		} else {
+			this.reimburseStatus = "Pending";
+		}
+	}
+	
+	public void setReimburStatus(String reimburStatus) {
+		this.reimburseStatus = reimburStatus;
+	}
+	
+	@Override
+	public String toString() {
+		return "ReimbursementStatus [reimburStatus=" + reimburseStatus + ", statusId=" + statusId + "]";
+	}
+
+}

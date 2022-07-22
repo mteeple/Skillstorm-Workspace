@@ -1,0 +1,16 @@
+package com.skillstorm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SpringBean {
+	@Autowired
+	private AnotherBean bean;
+	
+	//Singleton called only when started (eagerly)
+	public SpringBean() {
+		System.out.println("Instantiate");
+		//your fields haven't been initialized
+	}
+}

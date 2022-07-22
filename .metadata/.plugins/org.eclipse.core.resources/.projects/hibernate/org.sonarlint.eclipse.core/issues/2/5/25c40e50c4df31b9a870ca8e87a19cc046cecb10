@@ -1,0 +1,8 @@
+
+t	java:S125"<This block of commented-out lines of code should be removed.(š©’Õıÿÿÿÿ8Á¥êğŸ0HûÈRMAJORZ
+CODE_SMELL
+o	java:S125("<This block of commented-out lines of code should be removed.(—«¹Î8çô‘îŸ0HüÈRMAJORZ
+CODE_SMELL
+—
+java:S14884"^Immediately return this expression instead of assigning it to the temporary variable "object".(¤ø‡Òıÿÿÿÿ8ûÁ‹éŸ0HıÈRMINORZ
+CODE_SMELL

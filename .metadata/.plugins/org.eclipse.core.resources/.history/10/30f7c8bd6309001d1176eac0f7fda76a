@@ -1,0 +1,76 @@
+package com.skillstorm.data;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
+
+import models.Employee;
+
+public class EmployeeDAO {
+	LinkedList<Employee> data = new LinkedList<>();
+	
+	public EmployeeDAO() throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/expenseDB";
+		String username = "root";
+		String password = "root";
+		this.conn = DriverManager.getConnection(url, username, password);
+		System.out.println("connection made to database");
+	}
+	private Connection conn;
+	
+	public Employee create(Employee employee) throws SQLException{
+		String sql = "insert into expense(name, reason, notes, StatusId) values(?,?,?,0)";
+		PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		stmt.setString(1, employee.getName());
+		stmt.setString(2, employee.getReason());
+		stmt.setString(3, employee.getNotes());
+		stmt.executeUpdate();
+		
+		ResultSet rs =stmt.getGeneratedKeys();
+		rs.next();
+		int generatedId =rs.getInt(1);
+		employee.setId(generatedId);
+		System.out.println("Employee was created");
+		
+		return employee;
+	}
+	
+	public Set<Employee> findAll() throws SQLException{
+		Set<Employee> employees = new HashSet<Employee>();
+		String sql = "select id, name, reason, notes, StatusId from expense";
+		Statement stmt =conn.createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		while (rs.next()) {
+			Employee row = new Employee();
+			int id = rs.getInt("id");
+			String name = rs.getString("name");
+			String reason = rs.getString("reason");
+			String notes = rs.getString("notes");
+			int statusId = rs.getInt("statusId");
+			
+			row.setId(id);
+			row.setName(name);
+			row.setNotes(notes);
+			row.setReason(reason);
+			row.setStatusId(statusId);	
+			employees.add(row);
+		}
+		return employees;
+	}
+	
+	public boolean update(Employee employee) throws SQLException{
+		String sql = "update expense set statusId = ? where id = ?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, employee.getStatusId());
+		stmt.setInt(2, employee.getId());
+		return stmt.executeUpdate()==1;
+	}
+	
+}

@@ -1,0 +1,23 @@
+
+k
+java:S1854":Remove this useless assignment to local variable "bucket".(¦ÎÍ¾ÿÿÿÿÿHÁRMAJORZ
+CODE_SMELL
+\
+java:S1481"+Remove this unused "bucket" local variable.(¦ÎÍ¾ÿÿÿÿÿHÂRMINORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿHÄRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÙüüÿÿÿÿHÅRMAJORZ
+CODE_SMELL
+c	java:S106"9Replace this use of System.out or System.err by a logger.(ÓĞêLHÆRMAJORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(£¤œàHÇRMAJORZ
+CODE_SMELL
+E
+java:S2119!"Save and re-use this "Random".(¼İÅfHÈRCRITICALZBUG
+Y
+java:S1125#"(Remove the unnecessary boolean literals.(˜¸“ÙşÿÿÿÿHÉRMINORZ
+CODE_SMELL
+s
+java:S2094("BRemove this empty class, write its code or make it an "interface".(Ê›“œüÿÿÿÿHÌRMINORZ
+CODE_SMELL

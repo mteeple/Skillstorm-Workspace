@@ -1,0 +1,12 @@
+
+q	java:S106/"9Replace this use of System.out or System.err by a logger.(ръ┴м·    8Пр║дв0HЦ╓RMAJORZ
+CODE_SMELL
+Е
+java:S1989"IHandle the "IllegalArgumentException" thrown here in a "try/catch" block.(Ргч═¤    8Пр║дв0HФ╓RMINORZVULNERABILITY
+y
+java:S1128"@Remove this unused import 'javax.servlet.annotation.WebServlet'.(Щьв┤■    8Пр║дв0HЧ╓RMINORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(Лв┬╓8Пр║дв0HУ╓RMAJORZ
+CODE_SMELL
+l	java:S106'"9Replace this use of System.out or System.err by a logger.(■┴┬╒8Пр║дв0HХ╓RMAJORZ
+CODE_SMELL

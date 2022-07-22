@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM scripting practice</title>
+    <script>
+        console.log("Hello World!");
+        let count= 0;
+        function handleClick(){
+            console.log('Button Clicked!');
+            count++;
+            //Document.getElementById();
+            //This function takes an id as a parameter, and returns a reference to that HTML element
+            const countDiv = document.getElementById('count-div');
+            countDiv.innerText = `Current Count: ${count}`;
+        }
+        function handleSearch(){
+            //console logs the current value held by the input
+            const input =document.getElementById('search-bar');
+            console.log(input.value);
+        }
+        function createNewBox(){
+            //document.createElement() to dynamically create a new element
+            const newBox = document.createElement('div');
+            newBox.setAttribute('class','box'); //<Div class="box"></div>
+            //Now that I have created the box, Need to insert into page
+            //Want it inside the container
+            const boxContainer = document.getElementById('box-container');
+            boxContainer.appendChild(newBox);
+        }
+    </script>
+    <style>
+        .box{
+            margin: 10px 5px; 
+            border:1px solid black;
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row; 
+        }
+    </style>
+</head>
+<body>
+    <div id = "count-div">Current Count: 0</div>
+    <button onclick="handleClick()"> Click Me! </button>
+    <input type="text" onkeydown="handleSearch()" id="search-bar"/>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button onclick="createNewBox()">Create new box</button>
+    <div id="box-container" class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

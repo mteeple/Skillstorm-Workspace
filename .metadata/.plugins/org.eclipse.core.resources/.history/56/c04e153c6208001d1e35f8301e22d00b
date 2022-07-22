@@ -1,0 +1,46 @@
+package com.skillstorm;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class Expense{
+	public static void main(String[] args) throws SQLException {
+		Connection conn;
+		String url ="";
+		String user ="";
+		String password = "";
+		
+		Properties prop = new Properties();
+		
+		try(InputStream input = ClassLoader.getSystemResourceAsStream("application.properties")) {
+			prop.load(input);
+			url = prop.getProperty("database.url");
+			user = prop.getProperty("database.username");
+			password = prop.getProperty("database.password");
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		conn = DriverManager.getConnection(url, user, password);
+		
+		String sql ="insert into expense(name,reason,notes)values(?,?,?)";
+		String name ="Dan";
+		String reason ="Lost pickle";
+		String notes = "Think someone ate my pickle";
+		
+		PreparedStatement stmt= conn.prepareStatement(sql);
+		
+		stmt.setString(1, name);
+		stmt.setString(2, reason);
+		stmt.setString(3, notes);
+		
+		
+	}
+		
+		
+	
+}

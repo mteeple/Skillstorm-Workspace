@@ -1,0 +1,26 @@
+package com.skillstorm;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import com.skillstorm.beans.Expense;
+import com.skillstorm.data.ExpenseDAO;
+import com.skillstorm.data.ExpenseDAOHibernateImpl;
+
+@Configuration
+public class DatabaseLayerConfig {
+	@Bean //Bean definitions - tells Spring to manage these beans
+	@Scope("singleton")
+	public ExpenseDAO expenseDAO() {
+		//return new ExpenseDAOImpl();
+		return new ExpenseDAOHibernateImpl();
+		//return new ExpenseDAO(); No longer will work because its serving as an interface for the other two
+	}
+	
+	@Bean
+	@Scope("prototype") //calling context.getBean produces a brand NEW object
+	public Expense expense() {
+		return new Expense();
+	}
+}

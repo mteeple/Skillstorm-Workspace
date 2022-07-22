@@ -1,0 +1,73 @@
+package com.testing;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.sql.SQLException;
+import java.util.Set;
+
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.skillstorm.ExpenseDAO;
+import com.skillstorm.bean.Employee;
+
+public class EmpDAO {
+	static ExpenseDAO expenseDAO;
+	
+	@BeforeClass
+	public static void setUp() {
+		try {
+			expenseDAO = new ExpenseDAO();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void findAll() {
+		try {
+			Set<Employee> employees = expenseDAO.findAll();
+			for(Employee row: employees) {
+				System.out.println("ID: "+ row.getId()+ ", Name: " + row.getName() + ", Reason: " + row.getReason());
+			}
+			assertTrue(employees.size()>0);
+		}catch(SQLException e) {
+			e.printStackTrace();
+			fail();
+		}
+	}
+	
+	@Test
+	public void create() {
+		try {
+			Employee employee = expenseDAO.createEmployeeRecord(new Employee("bob"));
+			System.out.println(employee);
+		}catch(SQLException e) {
+			e.printStackTrace();
+			fail();
+		}
+	}
+	@Test
+	@Ignore
+	public void delete() {
+		try {
+			boolean success = expenseDAO.deleteExpense(5);
+			assertTrue(success);
+		}catch(SQLException e) {
+			e.printStackTrace();
+			fail();
+		}
+	}
+	
+	@Test
+	@Ignore
+	public void update() {
+		try {
+			expenseDAO.updateExpense(new Employee(6, "", "", ""));
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+}

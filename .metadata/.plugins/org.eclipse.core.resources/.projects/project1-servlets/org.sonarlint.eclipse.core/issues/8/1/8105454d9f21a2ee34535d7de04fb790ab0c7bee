@@ -1,0 +1,11 @@
+
+N
+java:S1700"Rename field "status"(¦­œ˜ÿÿÿÿÿ8¶Ë¢0HÜØRMAJORZ
+CODE_SMELL
+X	java:S1319""Add a default case to this switch.(ŸÌ§ô8¯Ìâ¤¢0HßØRCRITICALZ
+CODE_SMELL
+u
+java:S1126"AReplace this if-then-else statement by a single return statement.(Õ¸ùÀ8¯Ìâ¤¢0HİØRMINORZ
+CODE_SMELL
+]	java:S131(""Add a default case to this switch.(šÒøÿÿÿÿÿ8¯Ìâ¤¢0HŞØRCRITICALZ
+CODE_SMELL

@@ -1,0 +1,7 @@
+package com.skillstorm.beans;
+
+public class Expense {
+	private String amount;
+	private double amount;
+	
+}

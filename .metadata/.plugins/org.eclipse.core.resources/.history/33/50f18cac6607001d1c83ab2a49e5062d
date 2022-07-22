@@ -1,0 +1,7 @@
+package com.skillstorm.data;
+
+public class ExpenseDAO {
+	public void go() {
+		System.out.println("ExpenseDAO.go()");
+	}
+}

@@ -1,0 +1,86 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.skillstorm.data.EmployeeDAO;
+
+import models.Employee;
+
+@WebServlet(urlPatterns = "/my-servlet")
+public class Expense extends HttpServlet{
+	private EmployeeDAO employeeDAO;
+	
+	public Expense() throws SQLException{
+		super();
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		try {
+			employeeDAO = new EmployeeDAO();
+		}catch (SQLException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Init method");
+	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("Destroy method");
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//String param = req.getParameter("id"); //query parameter
+		ObjectMapper objectMapper = new ObjectMapper();
+		String json = null;
+		resp.setContentType("application/json");
+		try {
+			json = objectMapper.writeValueAsString(employeeDAO.findAll());
+		} catch (JsonProcessingException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		resp.getWriter().println(json);	
+	}
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		InputStream requestBody = req.getInputStream();
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		Employee employee = objectMapper.readValue(requestBody, Employee.class);
+		System.out.println(employee.getName() + " has been created");
+		
+		try {
+			employeeDAO.create(employee);
+			System.out.println("Employees: " + employeeDAO.findAll());
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Calling Update");
+		//super.doPut(req, resp);
+	}
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Calling Delete");
+		//super.doDelete(req, resp);
+	}
+}

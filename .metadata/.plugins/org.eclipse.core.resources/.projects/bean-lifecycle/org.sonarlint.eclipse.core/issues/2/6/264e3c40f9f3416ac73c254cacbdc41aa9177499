@@ -1,0 +1,12 @@
+
+n
+java:S1161":Add the "@Override" annotation above this method signature(ˆ’€·8‰ÇõÞ¡0HˆËRMAJORZ
+CODE_SMELL
+n
+java:S1161
+":Add the "@Override" annotation above this method signature(¾ýˆ„8‰ÇõÞ¡0H…ËRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(©‡»Îÿÿÿÿÿ8‰ÇõÞ¡0H‡ËRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(Î›Èð8‰ÇõÞ¡0HŠËRMAJORZ
+CODE_SMELL

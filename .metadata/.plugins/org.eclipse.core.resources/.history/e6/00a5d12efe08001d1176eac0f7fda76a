@@ -1,0 +1,6 @@
+package com.skillstorm.servlets;
+
+@WebServlet(urlPatterns = "/my-servlet")
+public class Expense extends HttpServlet{
+
+}

@@ -1,0 +1,21 @@
+package com.skillstorm;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.skillstorm")
+public class AppConfig {
+	public static void main(String[] args) {
+		//ApplicationContext  IS-A Beanfactory
+		new AnnotationConfigApplicationContext(AppConfig.class);
+	}
+	
+	@Bean(initMethod = "init")
+	public SpringBean springBean() {
+		return new SpringBean();
+	}
+	
+}

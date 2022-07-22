@@ -1,0 +1,8 @@
+package com.skillstorm.servlets;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(urlPatterns = "/*", loadOnStartup=1)
+public class Dispatcher extends HttpServlet{
+	
+}

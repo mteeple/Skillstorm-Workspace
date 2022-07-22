@@ -1,0 +1,25 @@
+package com.skillstorm;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class ExpenseDAO {
+	private Connection conn;
+	
+	public ExpenseDAO() throws SQLException{
+		
+		Properties prop = new Properties();
+		try(InputStream input = ClassLoader.getSystemResourceAsStream("application.properties")) {
+			prop.load(input);
+			url = prop.getProperty("database.url");
+			user = prop.getProperty("database.username");
+			password = prop.getProperty("database.password");
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

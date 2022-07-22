@@ -1,0 +1,9 @@
+
+l	java:S106"9Replace this use of System.out or System.err by a logger.(—œƒÑ8­ê ¢0HìÔRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(¸Îİ¢úÿÿÿÿ8­ê ¢0HíÔRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÑŒ8­ê ¢0HîÔRMAJORZ
+CODE_SMELL
+…
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ïáåÛ8­ê ¢0HïÔRMAJORZBUG

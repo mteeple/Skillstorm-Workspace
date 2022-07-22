@@ -1,0 +1,51 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//@WebServlet(urlPatterns = "/*", loadOnStartup=1)
+public class ExpenseId extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		StringBuilder requestURI = new StringBuilder(req.getRequestURI());
+		requestURI.replace(0, 15, "");
+		String baseURL = requestURI.substring(0, requestURI.indexOf("/"));
+		System.out.println("GET " + requestURI);
+		
+		switch(baseURL) {
+			case "employee":{
+				new EmployeeHandler().returnEmployee();
+				break;
+			}
+			case "status":{
+				new StatusHandler().returnStatus();
+				break;
+			}
+			default:{
+				throw new IllegalArgumentException("Handler not Mapped");
+			}
+		}
+	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println(req.getParameter("pickle"));
+	}
+}
+
+class EmployeeHandler {
+	public void returnEmployee() {
+		System.out.println("Card handler method");
+	}
+}
+class StatusHandler {
+	public void returnStatus() {
+		System.out.println("Card handler method");
+	}
+}
+
+

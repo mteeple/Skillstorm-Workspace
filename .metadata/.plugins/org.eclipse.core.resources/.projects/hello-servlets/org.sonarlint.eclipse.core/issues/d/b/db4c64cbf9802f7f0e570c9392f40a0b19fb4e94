@@ -1,0 +1,12 @@
+
+q	java:S106"9Replace this use of System.out or System.err by a logger.(ÉÙúÛşÿÿÿÿ8‡°Ã°›0HòÏRMAJORZ
+CODE_SMELL
+
+java:S1989""SHandle the following exception that could be thrown by "sendRedirect": IOException.(À—íÖıÿÿÿÿ8‰šïÏ›0HóÏRMINORZVULNERABILITY
+Œ
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(½­ü¡ÿÿÿÿÿ8Ü”½°›0HïÏRMINORZVULNERABILITY
+y
+java:S1128"@Remove this unused import 'javax.servlet.annotation.WebServlet'.(™ì¢´şÿÿÿÿ8ı·Ø›0HğÏRMINORZ
+CODE_SMELL
+l	java:S106!"9Replace this use of System.out or System.err by a logger.(¾ÖÀ®8ñø‰Ï›0HîÏRMAJORZ
+CODE_SMELL

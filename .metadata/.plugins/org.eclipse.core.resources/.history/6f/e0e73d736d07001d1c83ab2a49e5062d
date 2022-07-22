@@ -1,0 +1,22 @@
+package com.skillstorm.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.skillstorm.data.ExpenseDAO;
+
+public class ExpenseController {
+	@Autowired // looks inside the IOC contrainer for an ExpenseDAO bean then INJECT
+	@Qualifier //Specify which Bean to use (used if more than autowired choice)
+	private ExpenseDAO dao; //NOT new DAO()
+	
+	public void callDao() {
+		dao.go();
+	}
+
+	public void setDao(ExpenseDAO dao) {
+		this.dao = dao;
+	}
+	
+	
+}

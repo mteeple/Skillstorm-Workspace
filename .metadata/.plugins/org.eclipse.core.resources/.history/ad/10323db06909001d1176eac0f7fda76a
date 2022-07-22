@@ -1,0 +1,27 @@
+package com.skillstorm.data;
+
+public class StatusDAO {
+	private int status;
+	public StatusDAO() {
+		super();
+	}
+
+	public StatusDAO(int status) {
+		super();
+		this.status = status;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Status [status=" + status + "]";
+	}
+	
+}

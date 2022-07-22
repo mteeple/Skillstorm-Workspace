@@ -1,0 +1,87 @@
+<html>
+    <head>  <!-- The inner workings-->
+        <title>Hello World</title>
+        <!-- favicon, the google icon for the tab, SEO-->
+        <meta/>
+        <style>
+            /* Style is CSS (a bit better than inline styling) better to get into a css file*/
+        </style>
+        <!-- /> means it's a self-closing tag(HTML5 and beyond just self closes auto)-->
+        <link rel="stylesheet" href="styles.css"/> 
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>       
+    <!--HTML XHTML XML HTML5 -->
+    <body class="container-fluid"> <!-- User can see -->
+        <h1>h1</h1> <!-- autoformatted header styles meant to convey "depth" of a page-->
+        <h2>h2</h2> <!-- Can configure them. Screen Readers (semantic web tags for 508 Compliance ADA)-->
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+            <!-- Element (div)(noun)
+            attribute - part of the element - style (adjective)
+            CSS - cascading stylesheets (pretty)
+            With you as a developer, it's better to replace div with semantic web tags
+            like nav, section or footer.
+        -->
+        <div class = "row">
+            <section class = "col col-lg-2" style="background-color: lightblue;" >
+                Section 1
+            </section>
+            <div class = "col col-lg-10" style="background-color: green;" >
+                <a href="other.html">DIV 2</a> <!-- anchor - links one page to another-->
+            </div>
+        </div>
+        <span style="background-color: crimson;">
+            Span 1
+        </span>
+        <span style="background-color:skyblue;">
+            Span 2
+        </span>
+
+        <!-- unordered list -->
+        <ul>
+            <!-- list items with bullets-->
+            <li> Eggs</li>
+            <li> Milk</li>
+            <li> Bread</li>
+        </ul>
+        <ol>
+            <!-- list items with numbers-->
+            <!-- slass attribute: Identify a group of similar elements to be styled similarly-->
+            <!-- id is meant for one type's styling-->
+            <li id="eggs" class="grocery"> Eggs</li>
+            <li class="grocery"> Milk</li>
+            <li class="grocery"> Bread</li>
+        </ol>
+
+        <table class="table table-striped">
+            <thead> <!-- section of the table-->
+                <!-- table row & table header (cell)(th is bold)--> 
+                <tr><th>Character</th><th>HP</th></tr>
+            </thead>
+            <tbody> <!-- table row/table data (cell)-->
+                <tr><td>Gohan</td><td>1000</td></tr>
+                <tr><td>Vegeta</td><td>1500</td></tr>
+                <tr><td>Goku</td><td>2000</td></tr>                
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+
+        <!-- paragraph-->
+        <!-- &nbsp = Non Breaking Space- you can use this to add spaces-->
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+            deserunt mollit anim id est laborum.</p>
+
+        <pickle> My Pickle tag</pickle>
+    </body>     
+</html>

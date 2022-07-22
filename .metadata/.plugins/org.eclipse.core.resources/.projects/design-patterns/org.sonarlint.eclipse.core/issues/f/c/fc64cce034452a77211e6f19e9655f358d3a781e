@@ -1,0 +1,12 @@
+
+X
+java:S1602",Remove useless curly braces around statement(¥—ýðHØRMINORZ
+CODE_SMELL
+X
+java:S1602
+",Remove useless curly braces around statement(¥—ýðHÙRMINORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(å·¹ËùÿÿÿÿHÚRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(å·¹ËùÿÿÿÿHÛRMAJORZ
+CODE_SMELL

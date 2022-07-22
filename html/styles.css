@@ -1,0 +1,16 @@
+/* external stylesheet, which is best practice
+    This stylesheet can be shared among multiple html pages - Consistent look and feel
+*/
+/* element selctor: colors every element that has this tag */
+li {
+    color:blue;
+}
+/* Class selector: styles only by class=grocery */
+.grocery{
+    color: orange;
+    background-color: black;
+}
+/* id selector : styles a single element id =eggs*/
+#eggs{
+    color: white; 
+}

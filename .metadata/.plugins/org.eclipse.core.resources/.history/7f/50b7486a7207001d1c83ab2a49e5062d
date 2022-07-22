@@ -1,0 +1,22 @@
+package com.skillstorm.data;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+
+@Repository // Going to be accessing the database replace @Component to make it easier to know
+public class StormtrooperRepository {
+	
+	// key from our environment - exists somewhere on our machine
+	@Value("${jdbc.datasource.url }") // Spring Expression Language
+	private String url;
+	@Value("${jdbc.datasource.user }")
+	private String user;
+	@Value("${jdbc.datasource.pass }") // Even if private Spring will still find them
+	private String pass;
+	
+	public StormtrooperRepository() {
+		System.out.println("new StormtrooperRepository()");
+		System.out.printf("url: user: pass:", url, user, pass);
+	}
+	
+}

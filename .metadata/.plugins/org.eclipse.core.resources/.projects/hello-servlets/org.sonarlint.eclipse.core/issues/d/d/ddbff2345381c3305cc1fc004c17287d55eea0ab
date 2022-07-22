@@ -1,0 +1,13 @@
+
+†	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(ïŠøÉûÿÿÿÿ8Ìø»Ø›0HâÏRBLOCKERZ
+CODE_SMELL
+q	java:S1064"9Replace this use of System.out or System.err by a logger.(şáô®ÿÿÿÿÿ8²ÂÀØ›0HŞÏRMAJORZ
+CODE_SMELL
+	java:S128 "LEnd this switch case with an unconditional break, return or throw statement.( ˆŒå8¾ÅØ›0HİÏRBLOCKERZ
+CODE_SMELL
+…
+java:S1989$"IHandle the "IllegalArgumentException" thrown here in a "try/catch" block.(êèùÿÿÿÿ8¾ÅØ›0HáÏRMINORZVULNERABILITY
+q	java:S106-"9Replace this use of System.out or System.err by a logger.(ÍØñøÿÿÿÿ8²ÂÀØ›0HàÏRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(›Ëğùÿÿÿÿ8‘Ò“Ø›0HßÏRMAJORZ
+CODE_SMELL

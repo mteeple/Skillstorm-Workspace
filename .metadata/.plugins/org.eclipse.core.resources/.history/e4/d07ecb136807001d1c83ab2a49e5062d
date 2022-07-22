@@ -1,0 +1,18 @@
+package com.skillstorm.controllers;
+
+import com.skillstorm.data.ExpenseDAO;
+
+public class ExpenseController {
+	@Autowired // looks inside the IOC contrainer for an ExpenseDAO bean then INJECT
+	private ExpenseDAO dao; //NOT new DAO()
+	
+	public void callDao() {
+		dao.go();
+	}
+
+	public void setDao(ExpenseDAO dao) {
+		this.dao = dao;
+	}
+	
+	
+}

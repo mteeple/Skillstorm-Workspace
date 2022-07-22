@@ -1,0 +1,15 @@
+package com.skillstorm;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class StormtrooperRepository {
+	String url;
+	String user;
+	String pass;
+	
+	public StormtrooperRepository() {
+		System.out.println("new StormtrooperRepository()");
+	}
+	
+}

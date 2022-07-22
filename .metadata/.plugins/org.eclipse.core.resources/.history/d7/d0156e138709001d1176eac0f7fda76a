@@ -1,0 +1,118 @@
+package com.skillstorm.data;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Status;
+
+public class StatusDAO {
+	private Connection conn;
+	
+	public StatusDAO() {
+		String url = "jdbc:mysql://localhost:3306/expenseDB";
+		String username = "root";
+		String password = "root";
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			System.err.println("\nStatusDAO: " + e + "\n");
+		}
+		try {
+			this.conn = DriverManager.getConnection(url, username, password);
+		} catch (SQLException e) {
+			System.err.println("\nStatusDAO: " + e + "\n");
+		}
+		System.out.println("connection made to database");
+	}
+	
+	public Status create(Status status) throws SQLException{
+		String sql = "INSERT INTO reimbursestatus(Status) values (?);";
+
+		// flag: return generated keys
+		PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		stmt.setString(1, status.getStatus());
+		stmt.executeUpdate();
+
+		ResultSet resultSet = stmt.getGeneratedKeys(); // grab id...this throws an exception w/o flag
+		resultSet.next();
+		int generatedId = resultSet.getInt(1);
+		status.setId(generatedId);
+
+		return status;
+	}
+	
+	public Status findDefault() throws SQLException {
+		String sql = "SELECT id, Status FROM reimbursestatus WHERE Id = 1;";
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+
+		if (rs.next()) {
+			return new Status(rs.getInt("Id"), rs.getString("Status"));
+		} else {
+			return null;
+		}
+
+	}
+	
+	public Status findById(int id) throws SQLException{
+		String sql = "SELECT Id, Status FROM reimbursestatus WHERE Id = ?;";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, id);
+		ResultSet rs = stmt.executeQuery();
+		if (rs.next()) {
+			return new Status(rs.getInt("Id"), rs.getString("Status"));
+		} else {
+			return null;
+		}
+	}
+	
+	public List<Status> findAll() throws SQLException {
+		// set of statuses returned at the end
+		List<Status> Statuses = new ArrayList<Status>();
+		String sql = "SELECT Id, Status FROM reimbursestatus;";
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+
+		while (rs.next()) {
+			Status reimbursementStatus = new Status();
+			int id = rs.getInt("Id");
+			String status = rs.getString("Status");
+
+			reimbursementStatus.setId(id);
+			reimbursementStatus.setStatus(status);
+
+			Statuses.add(reimbursementStatus);
+		}
+		return Statuses;
+	}
+	
+	public boolean update(Status status) throws SQLException {
+		String sql = "UPDATE reimbursestatus SET Status = ? WHERE Id = ?;";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setString(1, status.getStatus());
+		stmt.setInt(2, status.getId());
+		return stmt.executeUpdate() == 1;
+	}
+	
+	public boolean delete(Status status) throws SQLException {
+		String sql = "DELETE FROM reimbursestatus WHERE Id = ?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, status.getId());
+		// Return true if one row was affected successfully
+		try {
+			return stmt.executeUpdate() == 1;
+		}
+		// We'll handle any FK constraint exception here
+		catch (SQLIntegrityConstraintViolationException e) {
+			return false;
+		}
+	}
+	
+}

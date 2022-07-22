@@ -1,0 +1,24 @@
+package com.skillstorm;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggingAspect {
+	// * means anything else matching go + whatever
+	@Before("execution(public void go*())") //Any method with the signature "public void go()"
+	public void adviseBeforeGoMethod() {
+		System.out.println("Aspect: Before go() ");
+	}
+	@After("execution(public void go())") //Any method with the signature "public void go()"
+	public void adviseAfterGoMethod() {
+		System.out.println("Aspect: After go() ");
+	}
+	
+	public void pointcutExpression() {
+		
+	}
+}

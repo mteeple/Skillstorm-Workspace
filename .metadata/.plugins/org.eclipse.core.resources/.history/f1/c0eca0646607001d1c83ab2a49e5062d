@@ -1,0 +1,34 @@
+package com.skillstorm;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.skillstorm.controllers.ExpenseController;
+import com.skillstorm.data.ExpenseDAO;
+
+@Configuration
+public class SpringConfig {
+	
+	public static void main(String[] args) {
+		//start a Spring App - by creating the IoC Container
+		//IoC is called a BeanFactory in Spring - Now more recently called ApplicationContext in Spring
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class); //Takes our public class config
+		
+	}
+	
+	//Bean Definitions - tells Spring to manage these beans
+	@Bean
+	public ExpenseDAO expenseDAO() {
+		return new ExpenseDAO();
+	}
+	@Bean
+	public ExpenseController expenseController() {
+		// call a setter or use a constructor (constructor injection or setter injection)
+		ExpenseController controller = new ExpenseController();
+		controller.setDao(expenseDAO());  // Dependency Injection or called Bean Wiring
+		return controller;
+	}
+	
+}

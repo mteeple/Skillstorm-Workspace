@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\MTeeple\Skillstorm-Workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2701564969.index
+1187156795.index
+359866140.index
+2020697011.index
+2315519379.index
+2340249256.index
+3803789452.index
+454883932.index

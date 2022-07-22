@@ -1,0 +1,54 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@WebServlet(urlPatterns = "/my-servlet")
+public class Expense extends HttpServlet{
+	private EmployeeDAO employeeDAO;
+	
+	public Expense() throws SQLException{
+		super();
+	}
+	
+	@Override
+	public void init() throws ServletException() {
+		try {
+			employeeDAO = new EmployeeDAO();
+		}catch(SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Init method");
+	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("Destroy method");
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String param = req.getParameter("id"); //query parameter
+		ObjectMapper objectMapper = new ObjectMapper();
+		String json = null;
+		resp.setContentType("application/json");
+		try param != null {
+			int id = Integer.parseInt(param);
+			System.out.println(id);
+			json = objectMapper.writeValueAsString(employeeDAO.findAll().get(id));
+		}catch(JsonProcessingException | SQLException e) {
+			//json = objectMapper.writeValueAsString(dao.findAll());
+			e.printStackTrace();
+		}
+		resp.getWriter().println(json);	
+	}
+}

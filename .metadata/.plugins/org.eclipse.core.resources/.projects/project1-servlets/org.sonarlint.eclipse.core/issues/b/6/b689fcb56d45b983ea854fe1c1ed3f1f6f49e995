@@ -1,0 +1,11 @@
+
+q	java:S106"9Replace this use of System.out or System.err by a logger.(›Ëğùÿÿÿÿ8 ¯©¤¢0HÒÕRMAJORZ
+CODE_SMELL
+e	java:S106$"9Replace this use of System.out or System.err by a logger.(¾ÖÀ®HÌÔRMAJORZ
+CODE_SMELL
+…
+java:S1989"IHandle the "IllegalArgumentException" thrown here in a "try/catch" block.(êèùÿÿÿÿ8ûÊ³¤¢0H‚ÖRMINORZVULNERABILITY
+q	java:S106*"9Replace this use of System.out or System.err by a logger.(ÍØñøÿÿÿÿ8ûÊ³¤¢0HƒÖRMAJORZ
+CODE_SMELL
+q	java:S106/"9Replace this use of System.out or System.err by a logger.(ÍØñøÿÿÿÿ8ûÊ³¤¢0H„ÖRMAJORZ
+CODE_SMELL

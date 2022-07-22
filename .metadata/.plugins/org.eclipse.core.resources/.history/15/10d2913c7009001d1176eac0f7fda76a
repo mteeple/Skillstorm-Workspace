@@ -1,0 +1,52 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.skillstorm.data.EmployeeDAO;
+import models.Employee;
+
+@WebServlet(urlPatterns = "/expense/*")
+public class ExpenseId extends HttpServlet{
+	private EmployeeDAO expenseId = new EmployeeDAO();
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		int id = getId(req);
+		try {
+			resp.getWriter().println(new ObjectMapper().writeValueAsString(expenseId.findById(id)));
+		} catch (JsonProcessingException e) {
+			System.err.println("JsonProcessingException: " + e);
+		} catch (IOException e) {
+			System.err.println("IOException: " + e);
+		} catch (SQLException e) {
+			System.err.println("SQLException: " + e);
+		}
+		resp.setContentType("application/json");
+	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println(req.getParameter("pickle"));
+	}
+}
+
+class EmployeeHandler {
+	public void returnEmployee() {
+		System.out.println("Card handler method");
+	}
+}
+class StatusHandler {
+	public void returnStatus() {
+		System.out.println("Card handler method");
+	}
+}
+
+

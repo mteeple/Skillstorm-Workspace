@@ -1,0 +1,16 @@
+package com.skillstorm.data;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
+@Repository // Going to be accessing the database replace @Component to make it easier to know
+public class StormtrooperRepository {
+	String url;
+	String user;
+	String pass;
+	
+	public StormtrooperRepository() {
+		System.out.println("new StormtrooperRepository()");
+	}
+	
+}

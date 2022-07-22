@@ -1,0 +1,7 @@
+package com.skillstorm;
+
+public class BusinessService {
+	public void go() {
+		System.out.println("BusinessService.go()");
+	}
+}

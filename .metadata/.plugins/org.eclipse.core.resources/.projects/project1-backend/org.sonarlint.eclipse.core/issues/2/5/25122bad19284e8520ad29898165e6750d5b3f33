@@ -1,0 +1,36 @@
+
+]
+java:S1481")Remove this unused "name" local variable.(¹·ş¸8í²ê¡0HšÑRMINORZ
+CODE_SMELL
+~
+java:S2095!"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(“´«8ÕÂ–ê¡0H£ÑRBLOCKERZBUG
+i
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8²«òê¡0H—ÑRMINORZ
+CODE_SMELL
+~
+java:S2095V"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8¢¹ëê¡0HÑRBLOCKERZBUG
+q	java:S1067"9Replace this use of System.out or System.err by a logger.(”âúóüÿÿÿÿ8êÇ“ê¡0H™ÑRMAJORZ
+CODE_SMELL
+{
+java:S20954"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÎË²ê¡0HœÑRBLOCKERZBUG
+q	java:S106'"9Replace this use of System.out or System.err by a logger.(”âúóüÿÿÿÿ8Ø°Äê¡0HÑRMAJORZ
+CODE_SMELL
+e
+java:S1128"1Remove this unused import 'java.util.Properties'.(¬µ²8²«òê¡0HŸÑRMINORZ
+CODE_SMELL
+d
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8²«òê¡0H§ÑRMINORZ
+CODE_SMELL
+_
+java:S1481"+Remove this unused "reason" local variable.(Ç‚É8í²ê¡0H¡ÑRMINORZ
+CODE_SMELL
+~
+java:S2095J"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Æ‹ïú8Š¸áê¡0H¦ÑRBLOCKERZBUG
+^
+java:S1481"*Remove this unused "notes" local variable.(£ÁÌ™8êÇ“ê¡0H•ÑRMINORZ
+CODE_SMELL
+~
+java:S2095]"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ä–Òê¡0H©ÑRBLOCKERZBUG
+
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(çŸúØ8ÎË²ê¡0H¤ÑRMINORZ
+CODE_SMELL

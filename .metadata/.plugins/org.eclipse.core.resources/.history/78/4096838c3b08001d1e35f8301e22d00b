@@ -1,0 +1,13 @@
+package com.skillstorm;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BusinessService {
+	public void go() {
+		System.out.println("BusinessService.go()");
+	}
+	public void goToWork() {
+		System.out.println("BusinessService.goToWork()");
+	}
+}

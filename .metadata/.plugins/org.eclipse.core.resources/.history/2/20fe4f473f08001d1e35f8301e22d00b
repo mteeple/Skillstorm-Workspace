@@ -1,0 +1,57 @@
+package com.skillstorm;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggingAspect {
+	
+	@Around("pointcutExpression()")
+	public void aroundAdvice(ProceedingJoinPoint method) {
+		System.out.println("Before");
+		
+		try {
+			System.out.println("Executing " + method.getSignature());
+			Object returnValue = method.proceed();
+		} catch(Throwable e) {
+			//handle the exception / @AfterThrowing cannot
+			System.out.println("Caught Exception " + e.getClass());
+		}
+		
+		System.out.println("After");
+	}
+	
+	// * means anything else matching go + whatever
+	@Before("pointcutExpression()") //Any method with the signature "public void go()"
+	public void adviseBeforeGoMethod() {
+		System.out.println("Aspect: Before go() ");
+	}
+	@After("pointcutExpression()") //Any method with the signature "public void go()"
+	public void adviseAfterGoMethod() {
+		System.out.println("Aspect: After go() ");
+	}
+	// if you use .. instead of *,* it will accept any amount of parameters (* *(..)) = accepts anything
+	@AfterReturning(pointcut = "pointcutExpression()", returning = "arg") //after *successfully* returning a value
+	public void afterReturning(Object arg) { // can use Object arg instead
+		System.out.println("@AfterReturning = " + arg); // Value cannot be changed, can only be inspected
+	}
+	
+	//After unsuccessfully returning a value
+	@AfterThrowing(pointcut= "pointcutExpression()", throwing="exception")
+	public void afterThrowing(Exception exception) {
+		//does NOT CATCH THE EXCEPTION
+		System.out.println("@AfterThrowing " + exception.getClass());
+	}
+	
+	
+	@Pointcut("execution(public boolean go*(..))") // DRY
+	public void pointcutExpression() {}
+}

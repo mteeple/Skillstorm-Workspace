@@ -1,0 +1,25 @@
+
+
+java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÜŒ¾8àÖÙŠ¢0H‹×RMINORZ
+CODE_SMELL
+l	java:S106L"9Replace this use of System.out or System.err by a logger.(¿¯ÚÅ8²äÌŠ¢0H×RMAJORZ
+CODE_SMELL
+q	java:S106("9Replace this use of System.out or System.err by a logger.(ñêùÅûÿÿÿÿ8ÓÈÃ¤¢0H—×RMAJORZ
+CODE_SMELL
+d
+java:S1481<"+Remove this unused "status" local variable.(»ˆ€ßøÿÿÿÿ8ÜõÜ¦¢0H­ÙRMINORZ
+CODE_SMELL
+ƒ
+java:S2095N"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆºÜùÿÿÿÿ8Ã‡ÈŠ¢0H×RBLOCKERZBUG
+{
+java:S20952"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÓÈÃ¤¢0H×RBLOCKERZBUG
+ƒ
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆºÜùÿÿÿÿ8ŠÛÿŠ¢0H×RBLOCKERZBUG
+s
+java:S1854<":Remove this useless assignment to local variable "status".(»ˆ€ßøÿÿÿÿ8ÜõÜ¦¢0H¬ÙRMAJORZ
+CODE_SMELL
+d
+java:S1172K"0Remove this unused method parameter "newStatus".(ÈÜºÎ8ÓÈÃ¤¢0H•×RMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(ÄåŞëúÿÿÿÿ8ÓÈÃ¤¢0H‘×RMAJORZ
+CODE_SMELL

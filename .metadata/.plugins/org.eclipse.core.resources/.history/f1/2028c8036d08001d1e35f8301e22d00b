@@ -1,0 +1,112 @@
+package com.skillstorm;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.HashSet;
+import java.util.Properties;
+import java.util.Set;
+
+import com.skillstorm.bean.Employee;
+
+public class ExpenseDAO {
+	private Connection conn;
+	
+	public ExpenseDAO() throws SQLException{
+		
+		String url ="";
+		String user ="";
+		String password = "";
+		Properties prop = new Properties();
+		try(InputStream input = ClassLoader.getSystemResourceAsStream("application.properties")) {
+			prop.load(input);
+			url = prop.getProperty("database.url");
+			user = prop.getProperty("database.username");
+			password = prop.getProperty("database.password");
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		this.conn = DriverManager.getConnection(url, user, password);
+	}
+	
+	public Employee createEmpRecord(Employee employee) throws SQLException{
+		String sql = "insert into expense(name, reason,notes)values(?,?,?)";
+		String name="";
+		String reason="";
+		String notes="";
+		
+		PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		stmt.setString(1, employee.getName());
+		stmt.setString(2, employee.getReason());
+		stmt.setString(3, employee.getNotes());
+		
+		stmt.executeUpdate();
+		System.out.println(stmt);
+		ResultSet rs =stmt.getGeneratedKeys();
+		rs.next();
+		
+		int generatedId =rs.getInt(1);
+		employee.setId(generatedId);
+
+		return employee;
+	}
+	
+	public Set<Employee> findAll() throws SQLException{
+		String sql = "select employeeId, name, reason, notes from expense";
+		Set<Employee> empSet = new HashSet<Employee>();
+		Statement stmt = conn.createStatement();
+		
+		ResultSet rs= stmt.executeQuery(sql);
+		System.out.println(stmt);
+		
+		while(rs.next()) {
+			Employee row = new Employee();
+			
+			int id= rs.getInt("employeeId");
+			String name = rs.getString("name");
+			String reason = rs.getString("reason");
+			
+			row.setId(id);
+			row.setName(name);
+			row.setReason(reason);
+			empSet.add(row);
+		}
+		
+		return empSet;
+	}
+	
+	public Employee findId(int id) throws SQLException{
+		String sql = "select employeeId, name, reason, notes from expense where employeeId = ?";
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setInt(1, id);
+		ResultSet rs = statement.executeQuery();
+		if (rs.next()) {
+			return new Employee(rs.getInt("employeeId"), rs.getString("Name"), rs.getString("reason"), rs.getString("notes"));
+		} else {
+			return null;
+		}
+	}
+	
+	public boolean deleteExpense(int id) throws SQLException{
+		String sql = "delete from expense where employeeId = ?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, id);
+		return stmt.executeUpdate() == 1;
+	}
+	
+	public boolean UpdateRecord(Employee employee) throws SQLException{
+		String sql = "update expense set Name = ?, reason=?, notes=? where employeeId=?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setString(1, employee.getName());
+		stmt.setString(2, employee.getReason());
+		stmt.setString(3, employee.getNotes());
+		stmt.setInt(4, employee.getId());
+				
+		return stmt.executeUpdate() == 1;
+	}
+}

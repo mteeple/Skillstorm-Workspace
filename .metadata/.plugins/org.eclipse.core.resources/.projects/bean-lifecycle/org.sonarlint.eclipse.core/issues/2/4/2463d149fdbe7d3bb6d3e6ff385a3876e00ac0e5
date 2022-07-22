@@ -1,0 +1,41 @@
+
+l	java:S106$"9Replace this use of System.out or System.err by a logger.(úæëó8Õå´Ş¡0HÊRMAJORZ
+CODE_SMELL
+q	java:S106:"9Replace this use of System.out or System.err by a logger.(õ¼ğ¦øÿÿÿÿ8îªÆŞ¡0HÕÊRMAJORZ
+CODE_SMELL
+q	java:S106>"9Replace this use of System.out or System.err by a logger.(œÛ˜‹üÿÿÿÿ8‘šŞ¡0HßÉRMAJORZ
+CODE_SMELL
+e
+java:S1068",Remove this unused "beanName" private field.(ª¬ÒÄùÿÿÿÿ8Æì„Ş¡0HªÉRMAJORZ
+CODE_SMELL
+
+java:S1450"WRemove the "beanName" field and declare it as a local variable in the relevant methods.(ª¬ÒÄùÿÿÿÿ8ç¿ÜŞ¡0HıÊRMINORZ
+CODE_SMELL
+q	java:S106+"9Replace this use of System.out or System.err by a logger.(µ»×ıÿÿÿÿ8ç¿ÜŞ¡0HÿÊRMAJORZ
+CODE_SMELL
+l	java:S1060"9Replace this use of System.out or System.err by a logger.(˜ôÜ—8¦×‹Ş¡0HÇÉRMAJORZ
+CODE_SMELL
+q	java:S106*"9Replace this use of System.out or System.err by a logger.(‹Ä™†úÿÿÿÿ8ç¿ÜŞ¡0HşÊRMAJORZ
+CODE_SMELL
+q	java:S106C"9Replace this use of System.out or System.err by a logger.(æ“ÍÆıÿÿÿÿ8ñÂŠŞ¡0HÀÉRMAJORZ
+CODE_SMELL
+“
+java:S1450"ZRemove the "beanFactory" field and declare it as a local variable in the relevant methods.(–Üéûùÿÿÿÿ8©¦—Ş¡0H×ÉRMINORZ
+CODE_SMELL
+Œ
+java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8ç¿ÜŞ¡0H€ËRMINORZ
+CODE_SMELL
+q	java:S106L"9Replace this use of System.out or System.err by a logger.(€ßÂüÿÿÿÿ8¹åáİ¡0H“ÉRMAJORZ
+CODE_SMELL
+~	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(ìÎÈúÿÿÿÿ8çš½Ş¡0HºÊRMAJORZ
+CODE_SMELL
+¥
+java:S1130="lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ìÎÈúÿÿÿÿ8çš½Ş¡0H½ÊRMINORZ
+CODE_SMELL
+h
+java:S1068"/Remove this unused "beanFactory" private field.(–Üéûùÿÿÿÿ8Æì„Ş¡0H¬ÉRMAJORZ
+CODE_SMELL
+q	java:S1065"9Replace this use of System.out or System.err by a logger.(°û‰íÿÿÿÿÿ8Êë½Ş¡0HÆÊRMAJORZ
+CODE_SMELL
+l	java:S106H"9Replace this use of System.out or System.err by a logger.(•·Ê8©ê°Ş¡0H“ÊRMAJORZ
+CODE_SMELL

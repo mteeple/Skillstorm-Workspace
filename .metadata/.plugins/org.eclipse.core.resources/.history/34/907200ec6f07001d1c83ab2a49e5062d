@@ -1,0 +1,12 @@
+package com.skillstorm;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class StormtrooperService {
+	public StormtrooperService() {
+		System.out.println("new StormtrooperService()");
+	}
+	
+	private StormtrooperRepository repository;
+}

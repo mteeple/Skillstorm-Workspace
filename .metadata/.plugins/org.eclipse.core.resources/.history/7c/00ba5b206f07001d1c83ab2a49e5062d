@@ -1,0 +1,9 @@
+package com.skillstorm;
+
+import org.springframework.stereotype.Component;
+
+@Component // register itself with Spring without bean
+//Minimizes the bean definitions in @Configuration files
+public class StormtrooperController {
+
+}

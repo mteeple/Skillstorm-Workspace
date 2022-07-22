@@ -1,0 +1,65 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.skillstorm.data.EmployeeDAO;
+
+import models.Employee;
+
+@WebServlet(urlPatterns = "/expense/*")
+public class ExpenseId extends HttpServlet{
+	private EmployeeDAO expenseId = new EmployeeDAO();
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		int id = getExpenseId(req);
+		try {
+			resp.getWriter().println(new ObjectMapper().writeValueAsString(expenseId.findById(id)));
+		} catch (JsonProcessingException e) {
+			System.err.println("JsonProcessingException: " + e);
+		} catch (IOException e) {
+			System.err.println("IOException: " + e);
+		} catch (SQLException e) {
+			System.err.println("SQLException: " + e);
+		}
+		resp.setContentType("application/json");
+	}
+	public static int getExpenseId(HttpServletRequest req) {
+		String[] path = req.getPathInfo().split("/"); // string array containing trailing strings at splits
+		return Integer.parseInt(path[1]);
+	}
+	
+
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int id = getExpenseId(req);
+		ObjectMapper mapper = new ObjectMapper();
+		InputStream requestBody = req.getInputStream();
+		Employee employee = mapper.readValue(requestBody, Employee.class);
+		
+		employee.setId(id);
+		
+		try {
+			employee.setStatus(new StatusDAO().findById(employee.getStatus().getId()));
+			expenseId.update(employee);
+			resp.getWriter().print(mapper.writeValueAsString(expenseId.findById(id)));
+			resp.setContentType("application/json");
+		}catch(SQLException e1) {
+			e1.printStackTrace();
+		}
+		
+	}
+}
+
+
+

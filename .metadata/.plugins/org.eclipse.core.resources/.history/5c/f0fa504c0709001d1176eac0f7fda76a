@@ -1,0 +1,22 @@
+package com.skillstorm.data;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.LinkedList;
+
+import models.Employee;
+
+public class EmployeeDAO {
+	LinkedList<Employee> data = new LinkedList<>();
+	
+	public EmployeeDAO() throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/expenseDB";
+		String username = "root";
+		String password = "root";
+		this.conn = DriverManager.getConnection(url, username, password);
+		System.out.println("connection made to database");
+	}
+	private Connection conn;
+}

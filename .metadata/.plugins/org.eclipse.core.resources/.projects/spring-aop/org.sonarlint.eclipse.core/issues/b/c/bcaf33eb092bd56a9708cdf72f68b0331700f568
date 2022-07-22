@@ -1,0 +1,23 @@
+
+k	java:S1065"9Replace this use of System.out or System.err by a logger.(êİò8ÃË¿á¡0HŒÌRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(œÓ€ü8Íãíà¡0HâËRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(ğêºû8ÃË¿á¡0HÌRMAJORZ
+CODE_SMELL
+¸
+java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(º¹ªÜ8«­Úà¡0HÏËRCRITICALZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(Ş´Œ8ë–Ëà¡0HËËRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(çÔ·†ÿÿÿÿÿ8­Ù¾à¡0HÉËRMAJORZ
+CODE_SMELL
+q	java:S106)"9Replace this use of System.out or System.err by a logger.(§®Üµüÿÿÿÿ8ÃË¿á¡0HÌRMAJORZ
+CODE_SMELL
+q	java:S106."9Replace this use of System.out or System.err by a logger.(’¦Ãíıÿÿÿÿ8ÃË¿á¡0H‹ÌRMAJORZ
+CODE_SMELL
+q	java:S106%"9Replace this use of System.out or System.err by a logger.(ıÊÍİøÿÿÿÿ8û¤—á¡0HÿËRMAJORZ
+CODE_SMELL
+s
+java:S1854"?Remove this useless assignment to local variable "returnValue".(şÎºà8ÌîÅá¡0H•ÌRMAJORZ
+CODE_SMELL

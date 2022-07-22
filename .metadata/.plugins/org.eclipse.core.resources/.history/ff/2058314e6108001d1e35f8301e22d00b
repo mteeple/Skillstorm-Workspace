@@ -1,0 +1,16 @@
+package com.skillstorm;
+
+import java.sql.Connection;
+import java.util.Properties;
+
+public class Expense {
+	public static void main(String[] args) {
+		Connection conn;
+		String url ="";
+		String username ="";
+		String password = "";
+		
+		Properties prop = new Properties();
+		
+	}
+}

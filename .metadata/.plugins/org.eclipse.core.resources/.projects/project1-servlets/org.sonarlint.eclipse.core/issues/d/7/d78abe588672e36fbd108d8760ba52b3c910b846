@@ -1,0 +1,15 @@
+
+q	java:S106!"9Replace this use of System.out or System.err by a logger.(¸Îİ¢úÿÿÿÿ8Ø¶œ ¢0HöÔRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(—œƒÑ8Ø¶œ ¢0HõÔRMAJORZ
+CODE_SMELL
+x
+java:S21472"DCombine this catch with the one at line 48, which has the same body.(ï­£Ä8Ğà ¢0HúÔRMINORZ
+CODE_SMELL
+x
+java:S21474"DCombine this catch with the one at line 48, which has the same body.(É®£8Ğà ¢0HüÔRMINORZ
+CODE_SMELL
+…
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ïáåÛ8Ø¶œ ¢0HøÔRMAJORZBUG
+l	java:S106#"9Replace this use of System.out or System.err by a logger.(ƒÑŒ8Ø¶œ ¢0H÷ÔRMAJORZ
+CODE_SMELL

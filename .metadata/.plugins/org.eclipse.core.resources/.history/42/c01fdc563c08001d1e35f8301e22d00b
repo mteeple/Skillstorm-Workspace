@@ -1,0 +1,30 @@
+package com.skillstorm;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggingAspect {
+	// * means anything else matching go + whatever
+	@Before("pointcutExpression()") //Any method with the signature "public void go()"
+	public void adviseBeforeGoMethod() {
+		System.out.println("Aspect: Before go() ");
+	}
+	@After("pointcutExpression()") //Any method with the signature "public void go()"
+	public void adviseAfterGoMethod() {
+		System.out.println("Aspect: After go() ");
+	}
+	
+	@AfterReturning(pointcut = "* goToWork(boolean weekday, boolean holiday)", returning = "arg") //after successfully returning a value
+	public void afterReturning(boolean arg) {
+		System.out.println("@AfterReturning" + arg);
+	}
+	
+	@Pointcut("execution(public void go())") // DRY
+	public void pointcutExpression() {}
+}

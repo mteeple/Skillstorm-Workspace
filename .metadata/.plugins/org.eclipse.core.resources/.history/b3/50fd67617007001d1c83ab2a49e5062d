@@ -1,0 +1,17 @@
+package com.skillstorm;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.skillstorm") //basePackage (scanning the package for @Component)
+public class StarWarsAppConfig {
+	public static void main(String[] args) { //ApplicationContext will eagerly load 
+		//Beanfactory - does NOT eagerly load singletons though
+		ApplicationContext context = new AnnotationConfigApplicationContext(StarWarsAppConfig.class);
+		System.out.println(context.getBean(StormtrooperController.class));
+	}
+	
+}

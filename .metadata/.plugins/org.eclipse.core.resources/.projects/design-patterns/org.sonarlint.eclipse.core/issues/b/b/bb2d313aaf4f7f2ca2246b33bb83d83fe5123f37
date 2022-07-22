@@ -1,0 +1,18 @@
+
+ƒ
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€HÜRMAJORZBUG
+d	java:S106."9Replace this use of System.out or System.err by a logger.(ööê”HÝRMAJORZ
+CODE_SMELL
+i	java:S106:"9Replace this use of System.out or System.err by a logger.(çË¨ÛøÿÿÿÿHÞRMAJORZ
+CODE_SMELL
+[
+java:S3740	"/Provide the parametrized type for this generic.(î£þÚHßRMAJORZ
+CODE_SMELL
+ƒ
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€HàRMAJORZBUG
+U
+java:S2446/"0"notify" may not wake up the appropriate thread.(“ÔÿÙHáRMAJORZBUG
+c	java:S106"9Replace this use of System.out or System.err by a logger.(ï¶×*HãRMAJORZ
+CODE_SMELL
+Z
+java:S2446;"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿHäRMAJORZBUG

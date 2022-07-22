@@ -1,0 +1,15 @@
+package com.skillstorm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component // register itself with Spring without bean
+//Minimizes the bean definitions in @Configuration files
+public class StormtrooperController {
+	
+	public StormtrooperController() {
+		System.out.println("new StormtrooperController");
+	}
+	@Autowired
+	private StormtrooperService service;
+}

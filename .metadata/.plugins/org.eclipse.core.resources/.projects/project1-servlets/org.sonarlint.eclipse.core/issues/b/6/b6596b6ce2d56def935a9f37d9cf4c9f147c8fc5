@@ -1,0 +1,27 @@
+
+l	java:S106"9Replace this use of System.out or System.err by a logger.( ¢ÚÙ8À™ÒŸ¢0HØRMAJORZ
+CODE_SMELL
+~
+java:S2095j"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8öæù¢0HØRBLOCKERZBUG
+~
+java:S2095B"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÿ¸šŸ¢0H‘ØRBLOCKERZBUG
+’
+java:S2293N"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ş…Ûñüÿÿÿÿ8öæù¢0H’ØRMINORZ
+CODE_SMELL
+‰	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş…Ûñüÿÿÿÿ8çŠş¢0H”ØRMINORZ
+CODE_SMELL
+~
+java:S2095b"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ÿ¸šŸ¢0H•ØRBLOCKERZBUG
+l	java:S106"9Replace this use of System.out or System.err by a logger.( ¢ÚÙ8À™ÒŸ¢0H–ØRMAJORZ
+CODE_SMELL
+ƒ
+java:S11929"GDefine a constant instead of duplicating this literal "Status" 3 times.(³îœáùÿÿÿÿ8öæù¢0H—ØRCRITICALZ
+CODE_SMELL
+~
+java:S2095'"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(“´«8öæù¢0H›ØRBLOCKERZBUG
+{
+java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8öæù¢0HœØRBLOCKERZBUG
+j	java:S106 "9Replace this use of System.out or System.err by a logger.(ÄåŞëúÿÿÿÿHØRMAJORZ
+CODE_SMELL
+{
+java:S20955"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8öæù¢0HØRBLOCKERZBUG

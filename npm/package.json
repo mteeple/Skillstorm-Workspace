@@ -1,0 +1,24 @@
+{
+  "name": "npm-practice",
+  "version": "1.0.0",
+  "description": "Place to practice npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "echo Hello World",
+    "start": "node index.js",
+    "build": "echo run some build script",
+    "dev": "echo run project in dev mode",
+    "prod": "echo run project in prod mode"
+  },
+  "keywords": [
+    "JavaScript",
+    "Skillstorm",
+    "NPM"
+  ],
+  "author": "Michael Teeple",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

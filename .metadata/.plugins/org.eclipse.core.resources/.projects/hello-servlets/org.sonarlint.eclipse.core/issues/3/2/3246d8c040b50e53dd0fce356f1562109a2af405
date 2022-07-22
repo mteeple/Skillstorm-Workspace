@@ -1,0 +1,41 @@
+
+l	java:S1061"9Replace this use of System.out or System.err by a logger.(ö¡¹ê8ÉÖ…Ö›0HÁĞRMAJORZ
+CODE_SMELL
+y
+java:S1128"@Remove this unused import 'javax.servlet.annotation.WebServlet'.(™ì¢´şÿÿÿÿ8ü·Ø›0H¿ĞRMINORZ
+CODE_SMELL
+
+java:S1192'"JDefine a constant instead of duplicating this literal "addedItem" 3 times.(¦ˆ«‘8É“¶Ö›0H¸ĞRCRITICALZ
+CODE_SMELL
+•
+java:S19890"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ìÍ¶ÿÿÿÿÿ8ëÃ¸Õ›0HÄĞRMINORZVULNERABILITY
+Œ
+java:S1989I"UHandle the following exception that could be thrown by "getInputStream": IOException.(ÕªèÎ8ÌÚ‰Ñ›0H¾ĞRMINORZVULNERABILITY
+l	java:S106("9Replace this use of System.out or System.err by a logger.(‰­§‘8Ï¹ºÕ›0H³ĞRMAJORZ
+CODE_SMELL
+o
+java:S2441Q"=Make "Product" serializable or don't store it in the session.(‚È˜øÿÿÿÿ8¦üªÖ›0H´ĞRMAJORZBUG
+µ
+java:S1989N"yHandle the following exceptions that could be thrown by "readValue": IOException, StreamReadException, DatabindException.(œÏ¡¯ıÿÿÿÿ8œÏœÑ›0HÅĞRMINORZVULNERABILITY
+q	java:S106P"9Replace this use of System.out or System.err by a logger.(’ó£àıÿÿÿÿ8Û¨Š×›0H²ĞRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(œ¾ô¹8ƒ¿¯Ñ›0HÂĞRMAJORZ
+CODE_SMELL
+œ
+java:S19893"eHandle the following exception that could be thrown by "writeValueAsString": JsonProcessingException.(®ªíü8è¬êÑ›0HµĞRMINORZVULNERABILITY
+¡
+java:S19895"eHandle the following exception that could be thrown by "writeValueAsString": JsonProcessingException.(ËØ±“üÿÿÿÿ8ÃòÃÕ›0H½ĞRMINORZVULNERABILITY
+Œ
+java:S1989:"PHandle the following exception that could be thrown by "getWriter": IOException.(¡Çâ³ıÿÿÿÿ8ÃòÃÕ›0HÆĞRMINORZVULNERABILITY
+o	java:S125;"<This block of commented-out lines of code should be removed.(Êú±»8¶ñÑ›0H¶ĞRMAJORZ
+CODE_SMELL
+l	java:S106C"9Replace this use of System.out or System.err by a logger.(ö¹£º8›Æ„×›0H±ĞRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(ÊúÀ¸ûÿÿÿÿ8É“¶Ö›0H·ĞRMAJORZ
+CODE_SMELL
+…
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(†½»è8Ÿ×¯Ğ›0HÃĞRMAJORZBUG
+n	java:S125X"<This block of commented-out lines of code should be removed.(™ËX8Àµ­Ñ›0H¼ĞRMAJORZ
+CODE_SMELL
+t	java:S125M"<This block of commented-out lines of code should be removed.(ÌáõÚúÿÿÿÿ8¾Š£Ñ›0H°ĞRMAJORZ
+CODE_SMELL

@@ -1,0 +1,60 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.skillstorm.data.EmployeeDAO;
+
+import models.Employee;
+
+@WebServlet(urlPatterns = "/expense")
+public class Expense extends HttpServlet{
+	private EmployeeDAO employeeDAO;
+	
+	public Expense() throws SQLException{
+		super();
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		try {
+			employeeDAO = new EmployeeDAO();
+		}catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Init method");
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			resp.getWriter().println(new ObjectMapper().writeValueAsString(employeeDAO.findAll()));
+			resp.setContentType("application/json");
+		} catch (JsonProcessingException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
+		try {
+			employeeDAO.create(new ObjectMapper().readValue(req.getInputStream(), Employee.class));
+			resp.getWriter().println(new ObjectMapper().writeValueAsString(employeeDAO.findAll()));
+			resp.setContentType("application/json");
+			System.out.println("Employees: " + employeeDAO.findAll());
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

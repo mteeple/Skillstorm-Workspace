@@ -1,0 +1,10 @@
+
+l	java:S106"9Replace this use of System.out or System.err by a logger.(„ýîœ8Þ€Ôà¡0HÍËRMAJORZ
+CODE_SMELL
+q	java:S106
+"9Replace this use of System.out or System.err by a logger.(±÷ÒÇÿÿÿÿÿ8…àŸà¡0H¯ËRMAJORZ
+CODE_SMELL
+y	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(é›û•8¨Ä‹á¡0HõËRMAJORZ
+CODE_SMELL
+N
+java:S2119"Save and re-use this "Random".(é›û•8¨Ä‹á¡0HöËRCRITICALZBUG

@@ -1,0 +1,8 @@
+127.0.0.1 - - [05/Jul/2022:13:32:28 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:32:43 -0500] "GET /hello-servlets/servlet/com.skillstorm.servlets.ProductController HTTP/1.1" 500 1172
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:32:43 -0500] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:32:49 -0500] "GET /hello-servlets/servlet/ HTTP/1.1" 500 1172
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:33:12 -0500] "GET /hello-servlets/servlet/com.skillstorm.servlets.DispatcherServlet HTTP/1.1" 500 1172
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:33:27 -0500] "GET /hello-servlets/servlet/ HTTP/1.1" 500 1172
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:33:31 -0500] "GET /hello-servlets HTTP/1.1" 500 1336
+0:0:0:0:0:0:0:1 - - [05/Jul/2022:13:33:53 -0500] "GET /hello-servlets/servlet/com.skillstorm.servlets.HelloServlet HTTP/1.1" 500 1172

@@ -1,0 +1,2 @@
+public class TestClass implements IInt{    public static void main(String[] args){       TestClass s = new TestClass();      int j = s.thevalue;           int k = IInt.thevalue;          int l = thevalue;            } } 
+interface IInt{       int thevalue = 0; } 

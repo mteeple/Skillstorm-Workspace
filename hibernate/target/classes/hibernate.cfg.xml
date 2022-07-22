@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration 
+    SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<!-- configure the hibernate sessionfactory (per database)-->
+    <session-factory>
+    	<!--  datasource  -->
+    	<!--  Class.forName("driver_class") done as a way to hardcode in(not always needed) -->
+    	<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://localhost:3306/chinook</property>
+    	<property name="connection.user">root</property>
+    	<property name="connection.password">root</property>
+    	
+    	<!--  query translation (dialect)  -->
+    	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    	
+    	<!--  connection pool  (it has a default size if not set)-->
+    	<property name="connect.pool_size">20</property>
+    	<property name="show_sql">true</property>
+    	
+    	<!--  entity mappings  -->
+    	<mapping class="com.skillstorm.beans.Artist"/>
+    	<mapping class="com.skillstorm.beans.Album"/>
+    	<mapping class="com.skillstorm.beans.Track"/>
+    	<mapping class="com.skillstorm.beans.Playlist"/>
+    	
+    </session-factory>
+</hibernate-configuration>

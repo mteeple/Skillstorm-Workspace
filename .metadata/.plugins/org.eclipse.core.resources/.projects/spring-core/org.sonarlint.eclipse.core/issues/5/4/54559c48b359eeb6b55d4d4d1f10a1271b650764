@@ -1,0 +1,20 @@
+
+l	java:S106 "9Replace this use of System.out or System.err by a logger.(Ùüê8·Äçµ¡0H´ËRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(Ùüê8·Äçµ¡0H³ËRMAJORZ
+CODE_SMELL
+–
+java:S1488("bImmediately return this expression instead of assigning it to the temporary variable "controller".(¸û¥Ï8Í¹Äµ¡0HºËRMINORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(‰×Î•8î¸Ñµ¡0H¶ËRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(ı¢¢øÿÿÿÿ8Æ‡ãµ¡0H½ËRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(Ô˜Ø„úÿÿÿÿ8Æ‡ãµ¡0H¸ËRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(ÿ·Š‘8Æ‡ãµ¡0H¹ËRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(Ô˜Ø„úÿÿÿÿ8î¸Ñµ¡0H·ËRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(ßÖëÁ8î¸Ñµ¡0HµËRMAJORZ
+CODE_SMELL

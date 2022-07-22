@@ -1,0 +1,19 @@
+
+Œ
+java:S19891"PHandle the following exception that could be thrown by "getWriter": IOException.(…ôàüÿÿÿÿ8·ÉŠ‹¢0H¸ÖRMINORZVULNERABILITY
+Œ
+java:S19898"UHandle the following exception that could be thrown by "getInputStream": IOException.(ÕªèÎ8·ÉŠ‹¢0H»ÖRMINORZVULNERABILITY
+Œ
+java:S1989U"UHandle the following exception that could be thrown by "getInputStream": IOException.(ÕªèÎ8´‰À¤¢0HÏÖRMINORZVULNERABILITY
+µ
+java:S1989;"yHandle the following exceptions that could be thrown by "readValue": IOException, StreamReadException, DatabindException.(ë±Šúÿÿÿÿ8´‰À¤¢0HĞÖRMINORZVULNERABILITY
+j	java:S106$"9Replace this use of System.out or System.err by a logger.(ÈĞT8úÊ³¤¢0H¹ÖRMAJORZ
+CODE_SMELL
+l	java:S106J"9Replace this use of System.out or System.err by a logger.(¼¡¨ò8´‰À¤¢0HÑÖRMAJORZ
+CODE_SMELL
+q	java:S106T"9Replace this use of System.out or System.err by a logger.(Ïº¨Ùüÿÿÿÿ8úÊ³¤¢0HâØRMAJORZ
+CODE_SMELL
+µ
+java:S1989W"yHandle the following exceptions that could be thrown by "readValue": IOException, StreamReadException, DatabindException.(ë±Šúÿÿÿÿ8·ÉŠ‹¢0H·ÖRMINORZVULNERABILITY
+l	java:S106X"9Replace this use of System.out or System.err by a logger.(¼¡¨ò8´‰À¤¢0HÀÖRMAJORZ
+CODE_SMELL

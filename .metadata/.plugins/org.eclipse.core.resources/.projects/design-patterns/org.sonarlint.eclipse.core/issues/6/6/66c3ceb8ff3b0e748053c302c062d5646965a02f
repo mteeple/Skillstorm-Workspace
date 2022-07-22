@@ -1,0 +1,13 @@
+
+Г
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(фа╣АHеRMAJORZBUG
+b
+java:S1135"2Complete the task associated to this TODO comment.(╒╠Ро■    HжRINFOZ
+CODE_SMELL
+c	java:S106"9Replace this use of System.out or System.err by a logger.(я╢╫*HзRMAJORZ
+CODE_SMELL
+Г
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(фа╣АHиRMAJORZBUG
+b
+java:S1135"2Complete the task associated to this TODO comment.(╒╠Ро■    HйRINFOZ
+CODE_SMELL

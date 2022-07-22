@@ -1,0 +1,2 @@
+public class TestClass{    static int a;    int b;    public TestClass(){       int c;       c = a;       a++;       b += c;    }    public static void main(String args[]) {   new TestClass();  
+System.out.println(1 + 5 < 3 + 7);         System.out.println( (2 + 2) >= 2 + 3);} }

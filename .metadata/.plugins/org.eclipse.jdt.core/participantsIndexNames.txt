@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\MTeeple\Skillstorm-Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1543488559.index
+\hello-servlet\target\generated-sources\annotations
+C:\Users\MTeeple\Skillstorm-Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2894595355.index
+\hello-servlets-test\target\generated-sources\annotations

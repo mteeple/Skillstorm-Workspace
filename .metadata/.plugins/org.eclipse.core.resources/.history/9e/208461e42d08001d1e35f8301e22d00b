@@ -1,0 +1,25 @@
+package com.skillstorm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SpringBean {
+	
+	@Value("hello")
+	private String value;
+	
+	@Autowired
+	private AnotherBean bean; //doesn't need setter
+	//uses API called Reflection
+	
+	//Step 1 -Singleton called only when started (eagerly)
+	public SpringBean() {
+		System.out.println("Instantiate");
+		//your fields haven't been initialized
+	}
+	
+	
+}
+

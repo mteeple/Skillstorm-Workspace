@@ -1,0 +1,18 @@
+
+Q
+java:S1181"%Catch Exception instead of Throwable.(·Ñë¡HÏRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(îµô­şÿÿÿÿHĞRMAJORZ
+CODE_SMELL
+c	java:S106
+"9Replace this use of System.out or System.err by a logger.(èŞ¨0HÑRMAJORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(½ß«¾HÒRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(ı£¬ûÿÿÿÿHÓRMAJORZ
+CODE_SMELL
+©
+java:S1130"}Remove the declaration of thrown exception 'exceptions.PulledWrongChuteException', as it cannot be thrown from method's body.(‡ìÙØHÔRMINORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(Ó˜åÊıÿÿÿÿHÖRMAJORZ
+CODE_SMELL

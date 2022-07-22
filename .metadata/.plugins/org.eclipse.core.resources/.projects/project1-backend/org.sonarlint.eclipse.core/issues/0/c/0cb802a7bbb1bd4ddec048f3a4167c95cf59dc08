@@ -1,0 +1,13 @@
+
+c
+java:S2699B"-Add at least one assertion to this test case.(Ö×õÄ8¼Ÿë¡0HêÏRBLOCKERZ
+CODE_SMELL
+
+java:S1607B"\Either add an explanation about why this test is skipped or remove the "@Ignore" annotation.(Ö×õÄ8¼Ÿë¡0HëÏRMAJORZ
+CODE_SMELL
+•
+java:S16076"\Either add an explanation about why this test is skipped or remove the "@Ignore" annotation.(ÒÑøïşÿÿÿÿ8Ä¬˜ë¡0HìÏRMAJORZ
+CODE_SMELL
+¿
+java:S3577"…Rename class "EmpDAO" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(ªÂ¸Èúÿÿÿÿ8â®“ë¡0HíÏRMINORZ
+CODE_SMELL

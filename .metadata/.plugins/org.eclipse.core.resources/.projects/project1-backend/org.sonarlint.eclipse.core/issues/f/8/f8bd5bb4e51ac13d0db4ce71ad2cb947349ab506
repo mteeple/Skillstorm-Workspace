@@ -1,0 +1,20 @@
+
+|
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(’àŒµüÿÿÿÿ8˜¯Éè¡0H…ÑRBLOCKERZBUG
+l	java:S106 "9Replace this use of System.out or System.err by a logger.(¹êæ›8˜ß×è¡0H„ÑRMAJORZ
+CODE_SMELL
+d
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8Ä»óê¡0H‚ÑRMINORZ
+CODE_SMELL
+k	java:S106%"9Replace this use of System.out or System.err by a logger.(ÚÕ8˜ß×è¡0HˆÑRMAJORZ
+CODE_SMELL
+i
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8Ä»óê¡0H‹ÑRMINORZ
+CODE_SMELL
+e
+java:S1128	"1Remove this unused import 'java.util.Properties'.(¬µ²8Ä»óê¡0H†ÑRMINORZ
+CODE_SMELL
+~
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÀœ¢8ñºÔè¡0HŠÑRBLOCKERZBUG
+q	java:S106""9Replace this use of System.out or System.err by a logger.(üö·®üÿÿÿÿ8ç¤Ùè¡0H‰ÑRMAJORZ
+CODE_SMELL

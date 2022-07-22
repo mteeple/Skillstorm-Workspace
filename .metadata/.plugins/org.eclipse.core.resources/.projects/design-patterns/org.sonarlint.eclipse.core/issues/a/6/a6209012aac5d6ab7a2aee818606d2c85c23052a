@@ -1,0 +1,13 @@
+
+k	java:S106"9Replace this use of System.out or System.err by a logger.(‡İƒá8ëãÜıš0HËRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(¸ô¦¡8ëãÜıš0HÊRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(õÔ¥”8ëãÜıš0HÇRMAJORZ
+CODE_SMELL
+‰
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ8ëãÜıš0HÃRMINORZ
+CODE_SMELL
+m
+java:S1161":Add the "@Override" annotation above this method signature(“–ış8ëãÜıš0HÈRMAJORZ
+CODE_SMELL

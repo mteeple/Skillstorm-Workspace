@@ -1,0 +1,32 @@
+package com.skillstorm;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
+
+public class Expense {
+	public static void main(String[] args) {
+		Connection conn;
+		String url ="";
+		String user ="";
+		String password = "";
+		
+		Properties prop = new Properties();
+		
+		try(InputStream input = ClassLoader.getSystemResourceAsStream("application.properties")) {
+			prop.load(input);
+			url = prop.getProperty("database.url");
+			user = prop.getProperty("database.username");
+			password = prop.getProperty("database.password");
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		conn = DriverManager.getConnection(url, user, password)
+		
+	}
+		
+		
+	
+}

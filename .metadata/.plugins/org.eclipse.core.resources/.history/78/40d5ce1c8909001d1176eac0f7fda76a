@@ -1,0 +1,107 @@
+package com.skillstorm.servlets;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.skillstorm.data.EmployeeDAO;
+
+import models.Employee;
+
+
+@WebServlet(urlPatterns = "/my-servlet")
+public class Expense extends HttpServlet { 
+
+	private EmployeeDAO employeeDao;
+	
+	public Expense() throws SQLException
+	{
+		super();
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		try {
+			employeeDao = new EmployeeDAO();
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Hello, this is the init() method");
+	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("Goodbye, this is the destroy() method");
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//resp.addHeader("Access-Control-Allow-Origin","http://localhost:3000");
+		ObjectMapper objectMapper = new ObjectMapper();
+		ObjectWriter ow = objectMapper.writer();
+		String json = "";
+		//this is how we will gather our json objects
+		try {
+			json = ow.writeValueAsString(employeeDao.findAll());
+		} catch (JsonProcessingException | SQLException e) {
+			e.printStackTrace();
+		}
+		
+		resp.getWriter().print(json);
+		resp.setContentType("application/json");
+		
+	}
+	
+	//POST 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		InputStream requestBody = req.getInputStream();
+		//in order to use
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		//this takes the input stream and parses the json into a java object
+		Employee employee = objectMapper.readValue(requestBody, Employee.class); //takes inputstream and converts to object
+		
+		
+		try {	
+			switch(employee.getStatusId()) 
+			{
+			case 1:
+				employeeDao.update(employee, 1);
+				break;
+			case 2:
+				employeeDao.update(employee, 2);
+				break;
+			default:
+				employeeDao.create(employee);
+			}
+			
+			System.out.println(employee);
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		
+	}
+	
+	//UPDATE
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Calling Update");
+		InputStream requestBody = req.getInputStream();
+		ObjectMapper objectMapper = new ObjectMapper();
+		Employee employee = objectMapper.readValue(requestBody, Employee.class);
+		
+		System.out.println(employee);
+	}
+	
+}

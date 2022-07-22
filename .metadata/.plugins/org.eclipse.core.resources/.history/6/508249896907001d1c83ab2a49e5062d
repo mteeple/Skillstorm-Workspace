@@ -1,0 +1,17 @@
+package com.skillstorm;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.skillstorm.data.ExpenseDAO;
+import com.skillstorm.data.ExpenseDAOHibernateImpl;
+
+@Configuration
+public class DatabaseLayerConfig {
+	@Bean
+	public ExpenseDAO expenseDAO() {
+		//return new ExpenseDAOImpl();
+		return new ExpenseDAOHibernateImpl();
+		//return new ExpenseDAO(); No longer will work because its serving as an interface for the other two
+	}
+}

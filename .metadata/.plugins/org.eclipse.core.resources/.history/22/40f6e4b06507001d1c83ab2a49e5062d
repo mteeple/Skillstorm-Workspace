@@ -1,0 +1,24 @@
+package com.skillstorm;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.skillstorm.controllers.ExpenseController;
+import com.skillstorm.data.ExpenseDAO;
+
+@Configuration
+public class SpringConfig {
+	
+	//Bean Definitions - tells Spring to manage these beans
+	@Bean
+	public ExpenseDAO expenseDAO() {
+		return new ExpenseDAO();
+	}
+	
+	public ExpenseController expenseController() {
+		// call a setter or use a constructor (constructor injection or setter injection)
+		ExpenseController controller = new ExpenseController();
+		controller.setDao(expenseDAO());
+	}
+	
+}

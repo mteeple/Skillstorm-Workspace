@@ -1,0 +1,19 @@
+package com.skillstorm;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggingAspect {
+	
+	@Before("execution(public void go())") //Any method with the signature "public void go()"
+	public void adviseGoMethod() {
+		System.out.println("Aspect: Before go() ");
+	}
+	@After("execution(public void go())") //Any method with the signature "public void go()"
+	public void adviseAGoMethod() {
+		System.out.println("Aspect: Before go() ");
+	}
+}

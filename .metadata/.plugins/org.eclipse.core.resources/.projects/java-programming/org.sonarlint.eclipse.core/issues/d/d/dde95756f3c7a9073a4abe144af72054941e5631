@@ -1,0 +1,10 @@
+
+f	java:S125"<This block of commented-out lines of code should be removed.(Œ‰¿BHûRMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(…ÚÁ¦ùÿÿÿÿHùRMAJORZ
+CODE_SMELL
+©
+java:S1130"xRemove the declaration of thrown exception 'java.io.FileNotFoundException' which is a subclass of 'java.io.IOException'.(À…ıóşÿÿÿÿH÷RMINORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(ã¹àôHúRMAJORZ
+CODE_SMELL

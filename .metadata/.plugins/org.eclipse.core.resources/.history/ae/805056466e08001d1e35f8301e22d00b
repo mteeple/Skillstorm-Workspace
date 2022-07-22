@@ -1,0 +1,15 @@
+package com.testing;
+
+import com.skillstorm.ExpenseDAO;
+
+public class EmpDAO {
+	static ExpenseDAO expenseDAO;
+	
+	public static void setUp() {
+		try {
+			expenseDAO = new ExpenseDAO();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+}

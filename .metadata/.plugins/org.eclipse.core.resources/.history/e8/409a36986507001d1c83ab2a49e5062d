@@ -1,0 +1,11 @@
+package com.skillstorm.controllers;
+
+import com.skillstorm.data.ExpenseDAO;
+
+public class ExpenseController {
+	private ExpenseDAO dao; //NOT new DAO()
+	
+	public void callDao() {
+		dao.go();
+	}
+}
